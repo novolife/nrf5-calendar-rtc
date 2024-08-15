@@ -33,7 +33,7 @@ void nrf_cal_set_callback(void (*callback)(void), uint32_t interval);
 // When this function is called a second time calibration data will be automatically generated based on the error in time since the
 // last call to the set time function. To ensure good calibration this function should not be called too often 
 // (depending on the accuracy of the 32 kHz clock it should be sufficient to call it between once a week and once a month). 
-void nrf_cal_set_time(struct tm * ptime);
+void nrf_cal_set_time(uint32_t year, uint32_t month, uint32_t day, uint32_t hour, uint32_t minute, uint32_t second);
 
 
 // Returns time as a tm struct. If no calibration data is available it will return the uncalibrated time.
