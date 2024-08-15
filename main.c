@@ -154,8 +154,12 @@ int main(void)
     NRF_CLOCK->TASKS_HFCLKSTART = 1;
     while(NRF_CLOCK->EVENTS_HFCLKSTARTED == 0);
 
-    nrf_cal_init();
-    nrf_cal_set_callback(calendar_updated, 4);
+    nrf_cal_def_t p_def = {
+        .int_interval = 1,
+        .callback = calendar_updated
+    };
+
+    nrf_cal_init(&p_def);
 
     uart_init();
 
