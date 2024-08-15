@@ -2532,6 +2532,119 @@
 
 // </e>
 
+// <e> CALENDAR_ENABLED - nrf_calendar - calendar driver - legacy layer
+//==========================================================
+#ifndef CALENDAR_ENABLED
+#define CALENDAR_ENABLED 1
+#endif
+
+// <q> CALENDAR_TIME_AS_MILLISECONDS  - timestamp as milliseconds
+
+#ifndef CALENDAR_TIME_AS_MILLISECONDS
+#define CALENDAR_TIME_AS_MILLISECONDS 0
+#endif
+
+
+// <o> CALENDAR_CONFIG_RTC_INSTANCE  - Configure RTC instance.
+
+// <1=> 1 
+// <2=> 2
+
+#ifndef CALENDAR_CONFIG_RTC_INSTANCE
+#define CALENDAR_CONFIG_RTC_INSTANCE 1
+#endif
+
+// <o> CALENDAR_CONFIG_RTC_FREQUENCY  - Configure RTC prescaler.
+ 
+// <4095=> 8 Hz (lowest)
+// <2047=> 16 Hz 
+// <1023=> 32 Hz 
+// <511=> 64 Hz 
+// <255=> 128 Hz 
+// <127=> 256 Hz 
+// <63=> 512 Hz 
+// <31=> 1024 Hz 
+// <15=> 2048 Hz 
+// <7=> 4096 Hz 
+// <3=> 8192 Hz 
+// <1=> 16384 Hz 
+// <0=> 32768 Hz 
+
+#ifndef CALENDAR_CONFIG_RTC_FREQUENCY
+#define CALENDAR_CONFIG_RTC_FREQUENCY 4095
+#endif
+
+// <o> CALENDAR_CONFIG_IRQ_PRIORITY  - Interrupt priority
+ 
+
+// <i> Priorities 0,2 (nRF51) and 0,1,4,5 (nRF52) are reserved for SoftDevice
+// <0=> 0 (highest) 
+// <1=> 1 
+// <2=> 2 
+// <3=> 3 
+// <4=> 4 
+// <5=> 5 
+// <6=> 6 
+// <7=> 7 
+
+#ifndef CALENDAR_CONFIG_IRQ_PRIORITY
+#define CALENDAR_CONFIG_IRQ_PRIORITY 6
+#endif
+
+// <e> CALENDAR_CONFIG_LOG_ENABLED - Enables logging in the module.
+//==========================================================
+#ifndef CALENDAR_CONFIG_LOG_ENABLED
+#define CALENDAR_CONFIG_LOG_ENABLED 1
+#endif
+// <o> CALENDAR_CONFIG_LOG_LEVEL  - Default Severity level
+ 
+// <0=> Off 
+// <1=> Error 
+// <2=> Warning 
+// <3=> Info 
+// <4=> Debug 
+
+#ifndef CALENDAR_CONFIG_LOG_LEVEL
+#define CALENDAR_CONFIG_LOG_LEVEL 3
+#endif
+
+// <o> CALENDAR_CONFIG_INFO_COLOR  - ANSI escape code prefix.
+ 
+// <0=> Default 
+// <1=> Black 
+// <2=> Red 
+// <3=> Green 
+// <4=> Yellow 
+// <5=> Blue 
+// <6=> Magenta 
+// <7=> Cyan 
+// <8=> White 
+
+#ifndef CALENDAR_CONFIG_INFO_COLOR
+#define CALENDAR_CONFIG_INFO_COLOR 0
+#endif
+
+// <o> CALENDAR_CONFIG_DEBUG_COLOR  - ANSI escape code prefix.
+ 
+// <0=> Default 
+// <1=> Black 
+// <2=> Red 
+// <3=> Green 
+// <4=> Yellow 
+// <5=> Blue 
+// <6=> Magenta 
+// <7=> Cyan 
+// <8=> White 
+
+#ifndef CALENDAR_CONFIG_DEBUG_COLOR
+#define CALENDAR_CONFIG_DEBUG_COLOR 0
+#endif
+
+// </e>
+
+// </e>
+
+ 
 // <e> NRF_ATFIFO_CONFIG_LOG_ENABLED - Enables logging in the module.
 //==========================================================
 #ifndef NRF_ATFIFO_CONFIG_LOG_ENABLED
